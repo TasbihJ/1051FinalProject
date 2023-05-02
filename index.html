@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>Home</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class=""fas fa-bars></i>
+            </label>
+            <ul> 
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            
+
+
+            </ul>
+        </nav>
+        <section>
+
+        </section>
+        
+        
+        <h1>SERENITY</h1>
+        <h3>          
+    
+        </h3>
+    </head>
+
+    <p>
+        Welcome to Serenity. This video collection captures the beauty of the sky that goes otherwise unnoticed. The sky is always present, so it's beauty is not always noticed nor appreciated. 
+        These videos show how beautiful the sky that we see every day is, and how the cloud pattern is always changing and never the same. 
+
+   
+    </p>
+    <br> 
+
+    <div class= "container">
+        <h1>Gallery Collection</h1>
+        <div class="video-container">
+            <div class="video"><video src="vid1.mov" controls></video></div>
+            <div class="video"><video src="vid2.mov" controls></video></div>
+            <div class="video"><video src="vid3.mov"  controls></video></div>
+            <div class="video"><video src="vid4.mov"  controls></video></div>
+            <div class="video"><video src="vid5.mov"  controls></video></div>
+            <div class="video"><video src="vid6.mov"  controls></video></div>
+  
+    </div>
+<div class="popup-video">
+   <span>&times;</span>
+    <video src="vid1.mov" muted autoplay controls></video>
+</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+            document.querySelector('.popup-video').style.display = 'block';
+            document.querySelector('.popup-video video').src = vid.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-video span').onclick = () =>{
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+    </script>
+        
+      
+     <p>By: Tasbih Johnson | 2023</p>
+    </body>
+
+</html>
